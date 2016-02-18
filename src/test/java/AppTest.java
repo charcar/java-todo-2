@@ -63,15 +63,17 @@ public class AppTest extends FluentTest {
   @Test
   public void tasksIsAddedAndDisplayed() {
     goTo("http://localhost:4567/categories/new");
-    fill(#name).with("Playing");
+    fill("#name").with("Playing");
     submit(".btn");
     click("a", withText("View Categories"));
     click("a", withText("Playing"));
     click("a", withText("Add a new task"));
     fill("#description").with("Existential questioning");
     submit(".btn");
-    assertThat(pagesSource()).contains("Existential questioning");
+    assertThat(pageSource()).contains("Success!");
   }
+
+
 
 
 
