@@ -70,7 +70,7 @@ public class AppTest extends FluentTest {
     click("a", withText("Add a new task"));
     fill("#description").with("Existential questioning");
     submit(".btn");
-    assertThat(pageSource()).contains("Success!");
+    assertThat(pageSource()).contains("Here are all the tasks");
   }
 
 
